@@ -1,0 +1,231 @@
+Class
+    Parameters/Arguments
+    Methods
+        Parameters/Arguments
+    Attributes
+
+class gelpy.Gel(path)
+    Initialize Gel object with the given path of an image file.
+    path (str): Path to an image file.
+
+    Class.setup_gel(labels=None, x_label_pos=None, gamma=DEFAULT_GAMMA,
+                gain=DEFAULT_GAIN, intensity_range=DEFAULT_INTENSITY_RANGE,
+                img_height_factor=DEFAULT_IMG_HEIGHT_FACTOR, 
+                label_rotation=DEFAULT_LABEL_ROTATION, save=False, 
+                show_type=DEFAULT_SHOW_TYPE, line_profile_width=None,
+                remove_bg=False, bg_model=MODEL_2D_PLANE_FIT_NAME,
+                bg_model_input=None)
+
+        Initializes the gel instance by loading the image, adjusting its properties and optionally 
+        removing its background.
+
+        labels (list, optional): A list of labels for the lanes in the gel image.
+        x_label_pos (list, optional): A list of the x-axis positions of the labels.
+        gamma (float, optional): A gamma correction factor for the image. Default is DEFAULT_GAMMA.
+        gain (float, optional): A gain correction factor for the image. Default is DEFAULT_GAIN.
+        intensity_range (tuple, optional): A tuple specifying the intensity range for the image. 
+            Default is DEFAULT_INTENSITY_RANGE.
+        img_height_factor (float, optional): A factor specifying the relative height of the image. 
+            Default is DEFAULT_IMG_HEIGHT_FACTOR.
+        label_rotation (int, optional): The rotation angle of the labels. Default is DEFAULT_LABEL_ROTATION.
+        save (bool, optional): A flag indicating whether the processed image should be saved. Default is False.
+        show_type (str, optional): The type of display for the image. Default is DEFAULT_SHOW_TYPE.
+        line_profile_width (int, optional): The width of the line profile for the gel.
+        remove_bg (bool, optional): A flag indicating whether the background should be removed from the image. Default is False.
+        bg_model (str, optional): The name of the background model to use if the background is to be removed. 
+            Default is MODEL_2D_PLANE_FIT_NAME.
+        bg_model_input (optional): Additional parameters for the background model.
+
+        Returns:
+            ValueError: If an invalid fit type is provided.
+    
+    Class.show_adjusted_images()
+
+    Class.plot_and_adjust_gels()
+
+    Class.init_image()
+
+    Class.setup_line_profile()
+
+    Class.remove_background()
+
+    Class.init_background_model()
+
+    Class.apply_background_model()
+
+    Class.show_raw_gel()
+
+    Class.show_line_profiles()
+
+    Class.init_line_profiles()
+
+    Class.apply_line_profiles()
+
+    Class.save()
+
+    Class.load()
+
+    Class.Image
+
+    Class.labels
+
+    Class.x_label_positions
+
+    Class.x_label_pos
+
+    Class.global_line_profile_width
+
+    Class.image
+
+    Class.file_name_without_ext
+
+    Class.background_model
+
+    Class.LineProfiles
+
+    Class.LineFits
+
+
+class gelpy.BackgroundHandler()
+
+    Class.extract_fit_data_from_image()
+
+    Class.fit_model_to_data()
+
+    Class.subtract_background()
+
+    Class.visualize_fit_data()
+
+    Class.image
+
+    Class.fit_data
+
+    Class.fit_data_X
+
+    Class.fit_data_Y
+
+    Class.params
+
+    Class.new_image
+
+
+class gelpy.PlaneFit2d()
+
+    Class.get_stripe_data()
+
+    Class.extract_fit_data_from_image()
+
+    Class.compute_new_image()
+
+    Class.compute_overlay()
+
+    Class.plot_image_with_overlay()
+
+    Class.plot_profiles()
+
+    Class.calculate_and_plot_slices()
+
+    Class.visualize_fit_data()
+
+    Class.fit_model_to_data()
+
+    Class.inlier_mask
+
+    Class.reconstructed_bg
+
+    Class.y_len_img
+
+    Class.x_len_img
+
+    Class.model_input
+
+    Class.top_stripe_data
+
+    Class.bottom_stripe_data
+
+    Class.fit_data
+
+    Class.fit_data_X
+
+    Class.fit_data_Y
+
+    Class.params
+
+
+class gelpy.Image()
+
+    Class.create_dummy_labels_if_needed()
+
+    Class.show_raw_image()
+
+    Class.open_image()
+
+    Class.adjust_img_contrast_non_linear()
+
+    Class.adjust_img_contrast_linear()
+
+    Class.setup_figure()
+
+    Class.configure_axis()
+
+    Class.configure_ticks()
+
+    Class.compute_x_label_positions()
+
+    Class.color_line_profile_area()
+
+    Class.plot_adjusted_gels()
+
+    Class.check_if_save_figure()
+
+    Class.gel_image
+
+    Class.image_height
+
+    Class.image_width
+
+    Class.file_name_without_extension
+
+    Class.labels
+
+    Class.x_label_pos
+
+    Class.gamma
+
+    Class.gain
+
+    Class.intensity_range
+
+    Class.img_height_factor
+
+    Class.label_rotation
+
+    Class.non_lin_contrast_adjusted
+
+    Class.lin_contrast_adjusted
+
+    Class.x_label_positions
+
+    Class.adjusted_gel_axes
+
+    Class.adjusted_gel_figs
+
+
+class gelpy.LineProfiles()
+
+
+class gelpy.LineFits()
+
+
+class gelpy.FitModel()
+
+
+class gelpy.GaussianFitModel()
+
+
+class gelpy.EmgFitModel()
+
+
+method gelpy.cm_to_inch(cm)
+    Returns:
+        float() in inches
